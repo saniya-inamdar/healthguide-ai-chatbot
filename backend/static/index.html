@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HealthGuide AI</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section id="auth-view" class="card auth-card">
+      <h1>HealthGuide AI</h1><p>General health information, available anytime.</p>
+      <p class="warning">For emergencies, call your local emergency number now.</p>
+      <form id="auth-form"><input id="name" placeholder="Your name (registration only)" maxlength="80"><input id="email" type="email" placeholder="Email address" required><input id="password" type="password" placeholder="Password (8+ characters)" minlength="8" required><button id="auth-submit">Create account</button></form>
+      <button id="auth-toggle" class="link-button">Already have an account? Log in</button><p id="auth-error" class="error"></p>
+    </section>
+    <section id="chat-view" class="card hidden">
+      <header><div><h1>HealthGuide AI</h1><p id="welcome"></p></div><button id="logout" class="secondary">Log out</button></header>
+      <p class="warning">This chatbot provides general information, not medical diagnosis or emergency care.</p>
+      <div id="messages" aria-live="polite"></div>
+      <form id="chat-form" class="composer"><input id="message" placeholder="Ask a health question in English..." maxlength="1500" required><button>Send</button></form>
+      <p id="chat-error" class="error"></p>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+.env
+venv/
+__pycache__/
+*.py[cod]
+healthguide.db
+.pytest_cache/
